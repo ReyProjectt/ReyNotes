@@ -1,0 +1,251 @@
+/* ================= RESET ================= */
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(170, 170, 172);
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= NAV ================= */
+nav {
+    background-color: #1212a1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav div img {
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 2px 3px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: 300ms;
+    border-bottom: 1px solid transparent;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid white;
+}
+
+/* ================= TEXT ================= */
+.materi-teks {
+    font-size: clamp(32px, 6vw, 75px);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.materi-teks-head {
+    font-size: clamp(40px, 8vw, 100px);
+    color: red;
+    text-align: center;
+    text-shadow: white 1px 2px 2px;
+}
+
+.materi-error {
+    font-size: clamp(32px, 6vw, 75px);
+    color: red;
+    text-shadow: 1px 2px 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* ================= LAYOUT UMUM ================= */
+.home-page ul li,
+.materi-page ul li,
+.choise-page ul li,
+.produk-page ul li,
+.help-page ul li,
+.error-page ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= CARD ================= */
+.isi-home,
+.isi-materi,
+.isi-choise,
+.isi-produk,
+.isi-help,
+.isi-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+    margin: 6vh auto;
+    max-width: 900px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 3px 4px;
+    background-color: #1212a1;
+    padding: 20px;
+}
+
+/* ================= HOME ================= */
+.home-img {
+    width: 100px;
+    border-radius: 100px;
+    margin-right: 20px;
+    height: auto;
+}
+
+.home-teks {
+    color: white;
+    font-size: clamp(20px, 5vw, 60px);
+    text-decoration: none;
+    transition: 300ms;
+    border-bottom: 1px solid transparent;
+}
+
+.home-teks:hover {
+    border-bottom: 1px solid white;
+}
+
+/* ================= MATERI ================= */
+.isi-materi {
+    margin-bottom: 10vh;
+}
+
+/* ================= CHOISE ================= */
+.Choise-teks {
+    font-size: clamp(20px, 5vw, 60px);
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= PRODUK ================= */
+.img-produk {
+    width: 100px;
+    border-radius: 100px;
+    margin-right: 20px;
+    height: auto;
+}
+
+.produk-teks {
+    font-size: clamp(20px, 5vw, 60px);
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= HELP ================= */
+.help-teks {
+    font-size: clamp(24px, 6vw, 75px);
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= ERROR ================= */
+.isi-error {
+    background-color: red;
+}
+
+.error-teks {
+    font-size: clamp(24px, 6vw, 75px);
+    color: white;
+}
+
+/* ================= RESPONSIVE HP ================= */
+@media (max-width: 600px) {
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.8rem 0.8rem;   
+    min-height: 64px;        
+
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li a {
+    font-size: 14px;        
+    padding: 8px 6px;        
+  }
+
+  nav div img {
+    width: 48px;             
+  }
+
+    .home-page ul li,
+    .materi-page ul li,
+    .choise-page ul li,
+    .produk-page ul li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+  .isi-home,
+  .isi-materi,
+  .isi-choise,
+  .isi-produk,
+  .isi-help,
+  .isi-error {
+    width: 85%;
+    margin: 3vh auto;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 20px;
+  }
+
+  .home-teks,
+  .materi-teks,
+  .materi-teks-head,
+  .materi-error,
+  .Choise-teks,
+  .produk-teks,
+  .help-teks,
+  .error-teks {
+    font-size: clamp(18px, 5vw, 32px);
+    text-align: center;
+  }
+
+  .home-img,
+  .img-produk {
+    width: 72px;         
+    height: auto;
+    margin: 0 0 10px 0;
+    flex-shrink: 0;      
+  }
+
+  .isi-home,
+  .isi-produk {
+    align-items: center;
+  }
+
+
+}
