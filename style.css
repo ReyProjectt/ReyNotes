@@ -130,7 +130,33 @@ nav ul li a:hover {
 /* ================= MATERI ================= */
 .isi-materi {
     margin-bottom: 10vh;
+  display: flex;
+  flex-direction: row;     
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  width: 90%;
+  max-width: 900px;
+  margin: 6vh auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+.materi-teks {
+  flex: 1;                    
+  max-width: 600px;            
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.6;
+}
+
+.materi-img {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+}
+
 
 /* ================= CHOISE ================= */
 .Choise-teks {
@@ -222,6 +248,11 @@ nav ul li a:hover {
     border-radius: 20px;
   }
 
+  .isi-materi {
+    flex-direction: column;   
+    text-align: center;
+  }
+
   .home-teks,
   .materi-teks,
   .materi-teks-head,
@@ -232,6 +263,12 @@ nav ul li a:hover {
   .error-teks {
     font-size: clamp(18px, 5vw, 32px);
     text-align: center;
+  }
+
+  .materi-teks {
+    width: 100%;
+    padding: 0 8px;
+    font-size: 16px;
   }
 
   .home-img,
