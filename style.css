@@ -7,6 +7,7 @@ html {
 }
 
 body {
+  padding-top: 80px;
     background-color: rgb(170, 170, 172);
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,7 +15,13 @@ body {
 
 /* ================= NAV ================= */
 nav {
-    background-color: #1212a1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+    background-color: #03036b;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,6 +94,7 @@ nav ul li a:hover {
 }
 
 /* ================= CARD ================= */
+
 .isi-home,
 .isi-materi,
 .isi-choise,
@@ -107,6 +115,53 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+.isi-home,
+.isi-choise,
+.isi-produk,
+.isi-help {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+
+  position: relative;
+  cursor: default;
+  color: white;
+  text-decoration: none;
+}
+
+.isi-error {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  justify-content: center;
+  gap: 12px;                
+}
+
+
+.isi-home a,
+.isi-choise a,
+.isi-produk a,
+.isi-help a {
+  gap: 16px;
+  border-radius: 12px;
+
+  display: inline-block;
+  padding: 14px 20px;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.isi-home a:hover,
+.isi-choise a:hover,
+.isi-produk a:hover,
+.isi-help a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
 /* ================= HOME ================= */
 .home-img {
     width: 100px;
@@ -116,11 +171,11 @@ nav ul li a:hover {
 }
 
 .home-teks {
-    color: white;
     font-size: clamp(20px, 5vw, 60px);
     text-decoration: none;
     transition: 300ms;
     border-bottom: 1px solid transparent;
+    color: white;
 }
 
 .home-teks:hover {
@@ -131,7 +186,7 @@ nav ul li a:hover {
 .isi-materi {
     margin-bottom: 10vh;
   display: flex;
-  flex-direction: row;     
+  flex-direction: column;     
   align-items: center;
   justify-content: center;
   gap: 24px;
@@ -149,6 +204,7 @@ nav ul li a:hover {
   overflow-wrap: break-word;
   word-break: break-word;
   line-height: 1.6;
+  color: white;
 }
 
 .materi-img {
@@ -161,8 +217,8 @@ nav ul li a:hover {
 /* ================= CHOISE ================= */
 .Choise-teks {
     font-size: clamp(20px, 5vw, 60px);
-    color: white;
     text-decoration: none;
+    color: white;
 }
 
 /* ================= PRODUK ================= */
@@ -175,14 +231,13 @@ nav ul li a:hover {
 
 .produk-teks {
     font-size: clamp(20px, 5vw, 60px);
-    color: white;
     text-decoration: none;
+    color: white;
 }
 
 /* ================= HELP ================= */
 .help-teks {
     font-size: clamp(24px, 6vw, 75px);
-    color: white;
     text-decoration: none;
 }
 
@@ -253,22 +308,24 @@ nav ul li a:hover {
     text-align: center;
   }
 
-  .home-teks,
-  .materi-teks,
-  .materi-teks-head,
-  .materi-error,
-  .Choise-teks,
-  .produk-teks,
-  .help-teks,
-  .error-teks {
-    font-size: clamp(18px, 5vw, 32px);
+  .materi-teks-head {
+    font-size: clamp(30px, 10vw, 32px);
     text-align: center;
   }
 
-  .materi-teks {
-    width: 100%;
-    padding: 0 8px;
-    font-size: 16px;
+  .home-teks,
+  .produk-teks,
+  .Choise-teks,
+  .help-teks,
+  .error-teks {
+    font-size: clamp(25px, 5vw, 32px);
+    text-align: center;
+  }
+
+  .materi-teks,
+  .materi-error { 
+    font-size: clamp(10px, 5vw, 32px);
+    text-align: center;
   }
 
   .home-img,
