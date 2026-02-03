@@ -56,6 +56,10 @@ nav ul li a:hover {
     border-bottom: 1px solid white;
 }
 
+.error-nav {
+  background-color: rgb(200, 0, 0);
+}
+
 /* ================= TEXT ================= */
 .materi-teks {
     font-size: clamp(32px, 6vw, 75px);
@@ -343,3 +347,4 @@ nav ul li a:hover {
 
 
 }
+
